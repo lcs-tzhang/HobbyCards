@@ -6,17 +6,30 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		51F282852D0E179600A0840C /* HobbyCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F282842D0E179600A0840C /* HobbyCardsApp.swift */; };
+		51F282972D0E17F500A0840C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51F282922D0E17F500A0840C /* Preview Assets.xcassets */; };
+		51F282982D0E17F500A0840C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51F282942D0E17F500A0840C /* Assets.xcassets */; };
+		51F282992D0E17F500A0840C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F282952D0E17F500A0840C /* ContentView.swift */; };
+		51F282A62D0E186300A0840C /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F282A52D0E186300A0840C /* Place.swift */; };
+		51F282AA2D0E18A600A0840C /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F282A82D0E18A600A0840C /* Flag.swift */; };
+		51F282B02D0E18FA00A0840C /* PlayersTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F282AF2D0E18FA00A0840C /* PlayersTabView.swift */; };
+		51F282B22D0E197000A0840C /* PlayerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F282B12D0E196F00A0840C /* PlayerCardView.swift */; };
+		51F282B42D0E1D8700A0840C /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F282B32D0E1D8700A0840C /* LandingView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		51F282812D0E179600A0840C /* HobbyCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HobbyCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51F282842D0E179600A0840C /* HobbyCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbyCardsApp.swift; sourceTree = "<group>"; };
+		51F282922D0E17F500A0840C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		51F282942D0E17F500A0840C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		51F282952D0E17F500A0840C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		51F282A52D0E186300A0840C /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		51F282A82D0E18A600A0840C /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
+		51F282AF2D0E18FA00A0840C /* PlayersTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersTabView.swift; sourceTree = "<group>"; };
+		51F282B12D0E196F00A0840C /* PlayerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCardView.swift; sourceTree = "<group>"; };
+		51F282B32D0E1D8700A0840C /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		51F282832D0E179600A0840C /* HobbyCards */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = HobbyCards;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		51F2827E2D0E179600A0840C /* Frameworks */ = {
@@ -32,7 +45,8 @@
 		51F282782D0E179600A0840C = {
 			isa = PBXGroup;
 			children = (
-				51F282832D0E179600A0840C /* HobbyCards */,
+				51F282842D0E179600A0840C /* HobbyCardsApp.swift */,
+				51F282962D0E17F500A0840C /* HobbyCards */,
 				51F282822D0E179600A0840C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +57,53 @@
 				51F282812D0E179600A0840C /* HobbyCards.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		51F282932D0E17F500A0840C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				51F282922D0E17F500A0840C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		51F282962D0E17F500A0840C /* HobbyCards */ = {
+			isa = PBXGroup;
+			children = (
+				51F282A92D0E18A600A0840C /* Shape */,
+				51F282AC2D0E18A800A0840C /* Model */,
+				51F282A52D0E186300A0840C /* Place.swift */,
+				51F282AE2D0E18DF00A0840C /* Views */,
+				51F282932D0E17F500A0840C /* Preview Content */,
+				51F282942D0E17F500A0840C /* Assets.xcassets */,
+				51F282952D0E17F500A0840C /* ContentView.swift */,
+			);
+			path = HobbyCards;
+			sourceTree = "<group>";
+		};
+		51F282A92D0E18A600A0840C /* Shape */ = {
+			isa = PBXGroup;
+			children = (
+				51F282A82D0E18A600A0840C /* Flag.swift */,
+			);
+			path = Shape;
+			sourceTree = "<group>";
+		};
+		51F282AC2D0E18A800A0840C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		51F282AE2D0E18DF00A0840C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				51F282AF2D0E18FA00A0840C /* PlayersTabView.swift */,
+				51F282B12D0E196F00A0840C /* PlayerCardView.swift */,
+				51F282B32D0E1D8700A0840C /* LandingView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +120,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				51F282832D0E179600A0840C /* HobbyCards */,
 			);
 			name = HobbyCards;
 			packageProductDependencies = (
@@ -109,6 +167,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51F282972D0E17F500A0840C /* Preview Assets.xcassets in Resources */,
+				51F282982D0E17F500A0840C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +179,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51F282992D0E17F500A0840C /* ContentView.swift in Sources */,
+				51F282A62D0E186300A0840C /* Place.swift in Sources */,
+				51F282B22D0E197000A0840C /* PlayerCardView.swift in Sources */,
+				51F282AA2D0E18A600A0840C /* Flag.swift in Sources */,
+				51F282B42D0E1D8700A0840C /* LandingView.swift in Sources */,
+				51F282852D0E179600A0840C /* HobbyCardsApp.swift in Sources */,
+				51F282B02D0E18FA00A0840C /* PlayersTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

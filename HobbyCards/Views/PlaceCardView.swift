@@ -26,60 +26,75 @@ struct PlaceCardView: View {
                 
                 Rectangle()
                     .fill(colorFromAssets(named: providedPlace.secondaryColor))
-                    .frame(height: 400)
+                    .frame(height: 430)
                     .overlay{
                         
                         VStack{
-                            
-                            Circle()
-                                .frame(height:80)
-                                .shadow(radius: 25)
-                                .overlay(alignment: .center) {
-                            Text(providedPlace.establishedyear)
-                                .foregroundColor(colorFromAssets(named:providedPlace.tertiaryColor))
-                                .font(.system(size: 30))
-                                .fontWeight(.bold)
+                            Image(providedPlace.imageofplace)
+                                .resizable()
+                                .scaledToFit()
+                                .clipShape(Circle())
+                                .frame(width: 220, height: 200)
+                                .padding(.bottom, -160)
+                           
+                            ZStack {
+                                
+                                HStack {
+                                    ZStack{
+                                        Flag()
+                                            .frame(width:100,height:320)
+                                            .scaleEffect(x:-1,y:-1)
+                                            .rotationEffect(Angle(degrees: -240))
+                                            .foregroundStyle(colorFromAssets(named:providedPlace.primaryColor))
+                                        
+                                        Flag()
+                                            .frame(width:100,height:320)
+                                            .scaleEffect(x:-1,y:-1)
+                                            .rotationEffect(Angle(degrees: -244))
+                                            .foregroundStyle(colorFromAssets(named:providedPlace.tertiaryColor))
+                                    }
+                                    
+                                    
+                                    
+                                    ZStack{
+                                        Flag()
+                                            .frame(width:100,height:320)
+                                            .scaleEffect(x:1,y:-1)
+                                            .rotationEffect(Angle(degrees: 240))
+                                            .foregroundStyle(colorFromAssets(named:providedPlace.primaryColor))
+                                        Flag()
+                                            .frame(width:100,height:320)
+                                            .scaleEffect(x:1,y:-1)
+                                            .rotationEffect(Angle(degrees: 244))
+                                            .foregroundStyle(colorFromAssets(named:providedPlace.tertiaryColor))
+                                    }
+                                }
+                                VStack {
+                                    Spacer()
+                                        .frame(height:290)
+                                   
+                                    Circle()
+                                        .frame(height:80)
+                                        .shadow(radius: 15)
+                                        .overlay(alignment: .center) {
+                                            Text(providedPlace.establishedyear)
+                                                .foregroundColor(colorFromAssets(named:providedPlace.tertiaryColor))
+                                                .font(.system(size: 30))
+                                                .fontWeight(.bold)
+                                        }
                                 }
                                 
+                            }
+                            
                         }
-                        HStack {
-                            ZStack{
-                                Flag()
-                                    .frame(width:100,height:320)
-                                    .scaleEffect(x:-1,y:-1)
-                                    .rotationEffect(Angle(degrees: -240))
-                                    .foregroundStyle(colorFromAssets(named:providedPlace.primaryColor))
-                                    
-                                Flag()
-                                    .frame(width:100,height:320)
-                                    .scaleEffect(x:-1,y:-1)
-                                    .rotationEffect(Angle(degrees: -244))
-                                    .foregroundStyle(colorFromAssets(named:providedPlace.tertiaryColor))
-                            }
-                        
-                       
-                        
-                            ZStack{
-                                Flag()
-                                    .frame(width:100,height:320)
-                                    .scaleEffect(x:1,y:-1)
-                                    .rotationEffect(Angle(degrees: 240))
-                                    .foregroundStyle(colorFromAssets(named:providedPlace.primaryColor))
-                                Flag()
-                                    .frame(width:100,height:320)
-                                    .scaleEffect(x:1,y:-1)
-                                    .rotationEffect(Angle(degrees: 244))
-                                    .foregroundStyle(colorFromAssets(named:providedPlace.tertiaryColor))
-                            }
+                        ZStack{
+                            Image(systemName: "airplane.departure")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height:50)
                         }
                         
                         
-                        Image(providedPlace.imageofplace)
-                            .resizable()
-                            .scaledToFit()
-                            .clipShape(Circle())
-                            .frame(width: 300, height: 350)
-                           
                     }
                 
                 

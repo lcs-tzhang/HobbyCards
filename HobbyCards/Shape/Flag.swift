@@ -14,9 +14,9 @@ struct Flag: Shape {
     var path = Path()
     
         path.move(to: CGPoint(x: rect.minX, y: rect.maxY))
-              path.addLine(to:CGPoint(x: rect.maxX*1/4, y: rect.minY))
+        path.addLine(to:CGPoint(x: rect.maxX*0.2, y: rect.minY))
         path.addLine(to:CGPoint(x: rect.maxX, y: rect.maxY*0.2))
-        path.addLine(to:CGPoint(x: rect.maxX*0.875, y: rect.maxY*0.4))
+        path.addLine(to:CGPoint(x: rect.maxX*0.75, y: rect.maxY*0.4))
         path.addLine(to:CGPoint(x: rect.maxX*1/4, y: rect.maxY*0.275))
               path.addLine(to:CGPoint(x: rect.maxX*0.1, y: rect.maxY))
               path.closeSubpath()

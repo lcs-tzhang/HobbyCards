@@ -6,10 +6,10 @@ struct PlaceCardView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
-              
+                
                 Rectangle()
                     .fill(colorFromAssets(named: providedPlace.primaryColor))
-                    .frame(height: 180)
+                    .frame(height: 170)
                     .overlay(alignment: .center) {
                         Text(providedPlace.name)
                             .font(.largeTitle)
@@ -18,10 +18,10 @@ struct PlaceCardView: View {
                             .padding(.top, 40)
                     }
                 
-               
+                
                 Rectangle()
                     .fill(colorFromAssets(named: providedPlace.secondaryColor))
-                    .frame(height: 430)
+                    .frame(height: 440)
                     .overlay {
                         VStack {
                             
@@ -35,7 +35,7 @@ struct PlaceCardView: View {
                             
                             ZStack {
                                 HStack(alignment: .top, spacing:0) {
-                                   
+                                    
                                     ZStack {
                                         Flag()
                                             .frame(width: 100, height: 350)
@@ -57,7 +57,7 @@ struct PlaceCardView: View {
                                             .offset(x: -70, y: 70)
                                     }
                                     
-                                 
+                                    
                                     ZStack {
                                         Flag()
                                             .frame(width: 100, height: 350)
@@ -80,7 +80,7 @@ struct PlaceCardView: View {
                                     }
                                 }
                                 
-                               
+                                
                                 VStack {
                                     Spacer()
                                         .frame(height: 290)
@@ -97,7 +97,7 @@ struct PlaceCardView: View {
                                 }
                             }
                         }
-                      
+                        
                         ZStack {
                             Image(systemName: "airplane.departure")
                                 .resizable()
@@ -106,11 +106,24 @@ struct PlaceCardView: View {
                         }
                     }
                 
-       
+                
                 Rectangle()
                     .fill(colorFromAssets(named: providedPlace.tertiaryColor))
+                    .overlay(alignment:.center) {
+                        VStack{
+                            Text(providedPlace.continents)
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .foregroundColor(colorFromAssets(named: providedPlace.secondaryColor))
+                            Image(providedPlace.imageocontinent)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height:180)
+                        }
+                    }
             }
-            .ignoresSafeArea()
+                    .ignoresSafeArea()
+            
         }
     }
     
@@ -124,8 +137,8 @@ struct PlaceCardView: View {
     }
 }
 
-// 预览
+
 #Preview {
-    PlaceCardView(providedPlace: TheGreatWall)
+    PlaceCardView(providedPlace: SydneyOperaHouse)
 }
 

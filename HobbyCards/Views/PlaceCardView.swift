@@ -1,18 +1,12 @@
-//
-//  PlayerCardView.swift
-//  HobbyCards
-//
-//  Created by xinyu zhang on 2024-12-14.
-//
-
 import SwiftUI
 
 struct PlaceCardView: View {
     let providedPlace: Place
-
+    
     var body: some View {
-        ZStack{
-            VStack(spacing:0) {
+        ZStack {
+            VStack(spacing: 0) {
+              
                 Rectangle()
                     .fill(colorFromAssets(named: providedPlace.primaryColor))
                     .frame(height: 180)
@@ -24,93 +18,103 @@ struct PlaceCardView: View {
                             .padding(.top, 40)
                     }
                 
+               
                 Rectangle()
                     .fill(colorFromAssets(named: providedPlace.secondaryColor))
                     .frame(height: 430)
-                    .overlay{
-                        
-                        VStack{
+                    .overlay {
+                        VStack {
+                            
                             Image(providedPlace.imageofplace)
                                 .resizable()
                                 .scaledToFit()
                                 .clipShape(Circle())
                                 .frame(width: 220, height: 200)
                                 .padding(.bottom, -160)
-                           
+                            
+                            
                             ZStack {
-                                
-                                HStack {
-                                    ZStack{
+                                HStack(alignment: .top, spacing:0) {
+                                   
+                                    ZStack {
                                         Flag()
-                                            .frame(width:100,height:320)
-                                            .scaleEffect(x:-1,y:-1)
+                                            .frame(width: 100, height: 350)
+                                            .scaleEffect(x: -1, y: -1)
                                             .rotationEffect(Angle(degrees: -240))
-                                            .foregroundStyle(colorFromAssets(named:providedPlace.primaryColor))
+                                            .foregroundStyle(colorFromAssets(named: providedPlace.primaryColor))
                                         
                                         Flag()
-                                            .frame(width:100,height:320)
-                                            .scaleEffect(x:-1,y:-1)
+                                            .frame(width: 100, height: 350)
+                                            .scaleEffect(x: -1, y: -1)
                                             .rotationEffect(Angle(degrees: -244))
-                                            .foregroundStyle(colorFromAssets(named:providedPlace.tertiaryColor))
+                                            .foregroundStyle(colorFromAssets(named: providedPlace.tertiaryColor))
+                                        
+                                        
+                                        Text(providedPlace.country)
+                                            .foregroundColor(colorFromAssets(named: providedPlace.primaryColor))
+                                            .font(.title)
+                                            .fontWeight(.semibold)
+                                            .offset(x: -70, y: 70)
                                     }
                                     
-                                    
-                                    
-                                    ZStack{
+                                 
+                                    ZStack {
                                         Flag()
-                                            .frame(width:100,height:320)
-                                            .scaleEffect(x:1,y:-1)
+                                            .frame(width: 100, height: 350)
+                                            .scaleEffect(x: 1, y: -1)
                                             .rotationEffect(Angle(degrees: 240))
-                                            .foregroundStyle(colorFromAssets(named:providedPlace.primaryColor))
+                                            .foregroundStyle(colorFromAssets(named: providedPlace.primaryColor))
+                                        
                                         Flag()
-                                            .frame(width:100,height:320)
-                                            .scaleEffect(x:1,y:-1)
+                                            .frame(width: 100, height: 350)
+                                            .scaleEffect(x: 1, y: -1)
                                             .rotationEffect(Angle(degrees: 244))
-                                            .foregroundStyle(colorFromAssets(named:providedPlace.tertiaryColor))
+                                            .foregroundStyle(colorFromAssets(named: providedPlace.tertiaryColor))
+                                        
+                                        
+                                        Text(providedPlace.city)
+                                            .foregroundColor(colorFromAssets(named: providedPlace.primaryColor))
+                                            .font(.title)
+                                            .fontWeight(.semibold)
+                                            .offset(x: 70, y: 70)
                                     }
                                 }
+                                
+                               
                                 VStack {
                                     Spacer()
-                                        .frame(height:290)
-                                   
+                                        .frame(height: 290)
+                                    
                                     Circle()
-                                        .frame(height:80)
+                                        .frame(height: 80)
                                         .shadow(radius: 15)
                                         .overlay(alignment: .center) {
                                             Text(providedPlace.establishedyear)
-                                                .foregroundColor(colorFromAssets(named:providedPlace.tertiaryColor))
+                                                .foregroundColor(colorFromAssets(named: providedPlace.tertiaryColor))
                                                 .font(.system(size: 30))
                                                 .fontWeight(.bold)
                                         }
                                 }
-                                
                             }
-                            
                         }
-                        ZStack{
+                      
+                        ZStack {
                             Image(systemName: "airplane.departure")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(height:50)
+                                .frame(height: 50)
                         }
-                        
-                        
                     }
                 
-                
+       
                 Rectangle()
                     .fill(colorFromAssets(named: providedPlace.tertiaryColor))
-                
             }
             .ignoresSafeArea()
-//
-//                
-                
-//                
-                
         }
     }
-
+    
+   
     private func colorFromAssets(named colorName: String) -> Color {
         guard let uiColor = UIColor(named: colorName) else {
             print("Warning: Color \(colorName) not found in Assets!")
@@ -120,7 +124,8 @@ struct PlaceCardView: View {
     }
 }
 
-// Preview
+// 预览
 #Preview {
-    PlaceCardView(providedPlace: LouvreMuseum)
+    PlaceCardView(providedPlace: TheGreatWall)
 }
+

@@ -22,7 +22,7 @@ struct Place: Identifiable {
     let imageocontinent:String
 }
     
-let TheGreatWall = Place(name: "The Great Wall", country: "Chian", city:"Beijing", establishedyear: "1644", continents: "Asia", primaryColor: "red", secondaryColor: "darkgreen", tertiaryColor: "midyellow",imageofplace: "TGW",imageocontinent: "iAsia")
+let TheGreatWall = Place(name: "The Great Wall", country: "China", city:"Beijing", establishedyear: "1644", continents: "Asia", primaryColor: "red", secondaryColor: "darkgreen", tertiaryColor: "midyellow",imageofplace: "TGW",imageocontinent: "iAsia")
 
 let LouvreMuseum = Place(name: "Louvre Museum", country: "France", city: "Paris", establishedyear: "1190", continents: "Europe",primaryColor: "beige",secondaryColor: "midyellow",tertiaryColor: "golden",imageofplace: "LM",imageocontinent: "iEurope")
     

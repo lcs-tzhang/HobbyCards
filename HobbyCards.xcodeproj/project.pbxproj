@@ -16,7 +16,6 @@
 		51F282B02D0E18FA00A0840C /* PlaceTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F282AF2D0E18FA00A0840C /* PlaceTabView.swift */; };
 		51F282B22D0E197000A0840C /* PlaceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F282B12D0E196F00A0840C /* PlaceCardView.swift */; };
 		51F282B42D0E1D8700A0840C /* CoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F282B32D0E1D8700A0840C /* CoverView.swift */; };
-		51F282C72D0E35CC00A0840C /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F282C62D0E35CC00A0840C /* LandingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +29,6 @@
 		51F282AF2D0E18FA00A0840C /* PlaceTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTabView.swift; sourceTree = "<group>"; };
 		51F282B12D0E196F00A0840C /* PlaceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCardView.swift; sourceTree = "<group>"; };
 		51F282B32D0E1D8700A0840C /* CoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverView.swift; sourceTree = "<group>"; };
-		51F282C62D0E35CC00A0840C /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +102,6 @@
 				51F282AF2D0E18FA00A0840C /* PlaceTabView.swift */,
 				51F282B12D0E196F00A0840C /* PlaceCardView.swift */,
 				51F282B32D0E1D8700A0840C /* CoverView.swift */,
-				51F282C62D0E35CC00A0840C /* LandingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,7 +183,6 @@
 				51F282A62D0E186300A0840C /* Place.swift in Sources */,
 				51F282B22D0E197000A0840C /* PlaceCardView.swift in Sources */,
 				51F282AA2D0E18A600A0840C /* Flag.swift in Sources */,
-				51F282C72D0E35CC00A0840C /* LandingView.swift in Sources */,
 				51F282B42D0E1D8700A0840C /* CoverView.swift in Sources */,
 				51F282852D0E179600A0840C /* HobbyCardsApp.swift in Sources */,
 				51F282B02D0E18FA00A0840C /* PlaceTabView.swift in Sources */,

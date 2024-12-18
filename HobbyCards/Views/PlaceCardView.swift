@@ -139,6 +139,6 @@ struct PlaceCardView: View {
 
 
 #Preview {
-    PlaceCardView(providedPlace: SydneyOperaHouse)
+    PlaceCardView(providedPlace: Pyramids)
 }
 

@@ -11,7 +11,7 @@ struct PlaceTabView: View {
     
     var body: some View {
         TabView{
-     
+            CoverView()
             ForEach(sights) {currentPlace in PlaceCardView(providedPlace: currentPlace)
             }
         }
